@@ -11,5 +11,5 @@ module.exports = {
     fontFamily: { sans: ["Lato", ...defaultTheme.fontFamily.sans] },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
