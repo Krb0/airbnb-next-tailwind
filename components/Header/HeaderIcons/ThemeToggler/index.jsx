@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MoonIcon from "@heroicons/react/solid/MoonIcon";
 import SunIcon from "@heroicons/react/solid/SunIcon";
-const ThemeToggler = ({ theme, setTheme }) => {
+const ThemeToggler = ({ theme, setTheme, systemTheme }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const ThemeToggler = ({ theme, setTheme }) => {
   }, []);
   const renderThemeChanger = () => {
     if (!mounted) return null;
-    const currentTheme = theme === "system" ? systemTheme : theme;
+    const currentTheme = theme === "system" ? "dark" : theme;
 
     if (currentTheme === "dark") {
       return (
